@@ -1,4 +1,4 @@
-# Task Management System API
+# Task Management System
 
 A simple REST API for a Task Management System built with Spring Boot, PostgreSQL, and Flyway.
 
