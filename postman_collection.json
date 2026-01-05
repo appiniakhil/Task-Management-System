@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "c92f163b-3f2d-4567-8901-234567890123",
+		"name": "Task Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users?page=0&size=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+                {
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Complete Assignment\",\n    \"description\": \"Finish the backend developer assignment\",\n    \"status\": \"TODO\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2023-12-31T23:59:59\",\n    \"assignedToId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/tasks?status=TODO&priority=HIGH",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "TODO"
+								},
+								{
+									"key": "priority",
+									"value": "HIGH"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+                {
+					"name": "Get Task by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+                {
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Update Task Title\",\n    \"description\": \"Updated description\",\n    \"status\": \"IN_PROGRESS\",\n    \"priority\": \"MEDIUM\",\n    \"dueDate\": \"2024-01-01T12:00:00\",\n    \"assignedToId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+                {
+					"name": "Update Task Status",
+					"request": {
+						"method": "PATCH",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"DONE\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+                {
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+                            {
+								"key": "X-API-KEY",
+								"value": "your-secret-api-key-12345",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
