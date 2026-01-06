@@ -129,7 +129,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Complete Assignment\",\n    \"description\": \"Finish the backend developer assignment\",\n    \"status\": \"TODO\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2023-12-31T23:59:59\",\n    \"assignedToId\": 1\n}"
+							"raw": "{\n    \"title\": \"Complete Assignment\",\n    \"description\": \"Finish the backend developer assignment\",\n    \"status\": \"TODO\",\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2023-12-31T23:59:59\",\n    \"assignedTo\": 1\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/tasks",
